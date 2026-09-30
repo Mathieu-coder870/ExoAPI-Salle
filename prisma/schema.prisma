@@ -20,3 +20,26 @@ model Room {
   building String
   floor Int
 } 
+
+model Reservation { 
+  id    Int     @id @default(autoincrement()) 
+  salle_id String  
+  date_debut String 
+  date_fin String
+  user_id String
+} 
+
+
+model User { 
+  id    Int     @id @default(autoincrement()) 
+  firstname String  
+  lastname String 
+  email String
+  roleId String
+  roleLabel String
+} 
+
+model Role { 
+  id    Int     @id @default(autoincrement()) 
+  label String  
+} 
